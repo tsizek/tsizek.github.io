@@ -3,7 +3,7 @@ layout: default
 title: Emmanouil Karolos Čižek — Research
 ---
 
-# Emmanouil Karolos Cizek (Čižek)
+# Emmanouil Karolos Čižek
 
 ## Monograph
 **A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions**  
@@ -15,7 +15,6 @@ We construct Euclidean Yang-Mills on R^4 for compact simple G and prove OS0-OS4 
 **Keywords:** Yang–Mills; mass gap; constructive QFT; Osterwalder–Schrader reconstruction; Wilson loops; SU(N)
 
 ### How to cite
-Cizek, E. K., *A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions*, Zenodo, DOI: 10.5281/zenodo.17246443
 
 Čižek, E. K. (2025). *A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions* (1.1.0). Zenodo. https://doi.org/10.5281/zenodo.17721926
 
