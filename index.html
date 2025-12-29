@@ -94,41 +94,52 @@
   </script>
 
   <style>
+    :root{
+      /* arXiv palette (brand-ish) */
+      --warm-wash: #f9f7f7;
+      --library-grey: #6b6459;
+      --cornell-red: #b31b1b;
+      --archival-blue: #1f5e96;
+
+      /* UI tokens */
+      --bg: var(--warm-wash);
+      --card: #ffffff;
+      --border: rgba(107, 100, 89, 0.28);  /* library grey, softened */
+      --text: #111111;
+      --muted: rgba(107, 100, 89, 0.90);
+      --link: var(--cornell-red);
+      --link-hover: var(--archival-blue);
+      --shadow: 0 10px 28px rgba(0,0,0,.08);
+    }
+
     body {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 16px;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.55;
-      background: #0f3d2e;   /* deep green */
-      color: #111;
+      background: var(--bg);
+      color: var(--text);
     }
 
-    /* Content on a clean card (tinted, not white) */
+    /* Content on a clean card */
     .wrap {
-      background: #f2f7f4;                 /* soft green-tinted paper */
-      border: 1px solid #d6e3dc;           /* gentle green-gray border */
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.18);
-      position: relative;
-    }
-
-    /* subtle accent bar */
-    .wrap:before{
-      content:"";
-      display:block;
-      height:4px;
-      border-radius: 10px;
-      background: #1f6f52;                 /* accent green */
-      margin: -28px -28px 22px -28px;      /* aligns to card edges */
+      box-shadow: var(--shadow);
+      border-top: 6px solid var(--cornell-red);
     }
 
     h1 { margin-bottom: 0.25em; }
-    .meta { margin-top: 0; opacity: 0.88; }
-    a { word-break: break-word; }
+    .meta { margin-top: 0; opacity: 0.92; color: var(--muted); }
+
+    a { word-break: break-word; color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+
     ul { padding-left: 18px; }
-    .small { opacity: .65; font-size: 12px; margin-top: 40px; }
+    .small { opacity: .70; color: var(--muted); font-size: 12px; margin-top: 40px; }
     .links a { margin-right: 12px; }
   </style>
 </head>
