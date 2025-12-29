@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Emmanouil Karolos Cizek (Čižek) — Research
 ---
 
@@ -6,10 +7,10 @@ title: Emmanouil Karolos Cizek (Čižek) — Research
 
 ## Monograph
 **A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions**  
-**DOI (canonical, Zenodo):** https://doi.org/10.5281/zenodo.XXXXXXXX
+**DOI (canonical, Zenodo):** https://doi.org/10.5281/zenodo.17246443
 
 ### Abstract
-(Write 5–8 sentences here. Say what the framework is, what is constructed/proved, and what “mass gap” means in your setup.)
+We construct Euclidean Yang-Mills on R^4 for compact simple G and prove OS0-OS4 at any fixed slab thickness t>0 via a regulator- and coupling-uniform Harris mixing of the slab boundary dynamics. Reflection positivity holds on the gauge-invariant subalgebra; the transfer contraction implies a strictly positive Hamiltonian mass gap after OS reconstruction. Nonperturbative Slavnov-Taylor/BRST identities are established, with torsion in a BRST doublet and decoupled from gauge-invariant correlators. A lattice anchor corroborates slab-wise mixing and the gap. The framework is regulator-uniform, corridor-free, and independent of compactness assumptions.
 
 **Keywords:** Yang–Mills; mass gap; constructive QFT; Osterwalder–Schrader reconstruction; Wilson loops; SU(N)
 
