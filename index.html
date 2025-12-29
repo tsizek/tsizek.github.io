@@ -68,7 +68,18 @@
         "name": "A Structural and Conceptual Overview of A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17718646" },
-        "url": "https://doi.org/10.5281/zenodo.17718646"
+        "url": "https://doi.org/10.5281/zenodo.17718646",
+        "keywords": [
+          "Yang–Mills",
+          "mass gap",
+          "constructive QFT",
+          "Osterwalder–Schrader reconstruction",
+          "reflection positivity",
+          "Wilson loops",
+          "BRST",
+          "structural overview",
+          "conceptual overview"
+        ]
       },
       {
         "@type": "ScholarlyArticle",
@@ -83,15 +94,15 @@
   </script>
 
   <style>
-    /* ====== More intense palette (same feel, less “washed-out”) ====== */
+    /* ====== Page background inspired by your geometric palette image ====== */
     :root{
-      --paper: #f3eee4;
-      --brick: #b11f16;    /* richer red */
-      --mustard: #d18a00;  /* richer yellow/orange */
-      --teal: #0e6b70;     /* stronger teal */
-      --blue: #1c4f89;     /* deeper blue */
-      --green: #1f7a4f;    /* deeper green */
-      --slate: #4a5a66;
+      --paper: #f3efe6;
+      --brick: #b84b3b;
+      --mustard: #d7a23a;
+      --teal: #2f6d73;
+      --blue: #2f5d8a;
+      --green: #3e7b5b;
+      --slate: #5d6b78;
       --link: #0b57d0;
     }
 
@@ -104,23 +115,23 @@
       color: #111;
       background-color: var(--paper);
 
-      /* SAME shapes, higher alpha = more intense */
+      /* Layered gradients for “geometric blocks + soft circles” feel */
       background-image:
         /* big angled blocks */
-        linear-gradient(135deg, rgba(177,31,22,.75) 0 22%, transparent 22%),
-        linear-gradient(45deg,  rgba(209,138,0,.70) 0 18%, transparent 18%),
-        linear-gradient(225deg, rgba(28,79,137,.62) 0 24%, transparent 24%),
-        linear-gradient(315deg, rgba(31,122,79,.62) 0 26%, transparent 26%),
+        linear-gradient(135deg, rgba(184,75,59,.45) 0 22%, transparent 22%),
+        linear-gradient(45deg,  rgba(215,162,58,.45) 0 18%, transparent 18%),
+        linear-gradient(225deg, rgba(47,93,138,.35) 0 24%, transparent 24%),
+        linear-gradient(315deg, rgba(62,123,91,.35) 0 26%, transparent 26%),
 
         /* secondary facets */
-        linear-gradient(120deg, rgba(14,107,112,.46) 0 34%, transparent 34%),
-        linear-gradient(300deg, rgba(74,90,102,.38) 0 28%, transparent 28%),
+        linear-gradient(120deg, rgba(47,109,115,.22) 0 34%, transparent 34%),
+        linear-gradient(300deg, rgba(93,107,120,.18) 0 28%, transparent 28%),
 
-        /* soft circles (also stronger) */
-        radial-gradient(circle at 18% 14%, rgba(177,31,22,.42) 0 18%, transparent 19%),
-        radial-gradient(circle at 78% 20%, rgba(209,138,0,.38) 0 14%, transparent 15%),
-        radial-gradient(circle at 70% 84%, rgba(28,79,137,.36) 0 18%, transparent 19%),
-        radial-gradient(circle at 30% 78%, rgba(31,122,79,.32) 0 16%, transparent 17%);
+        /* soft circles (muted) */
+        radial-gradient(circle at 18% 14%, rgba(184,75,59,.22) 0 18%, transparent 19%),
+        radial-gradient(circle at 78% 20%, rgba(215,162,58,.20) 0 14%, transparent 15%),
+        radial-gradient(circle at 70% 84%, rgba(47,93,138,.18) 0 18%, transparent 19%),
+        radial-gradient(circle at 30% 78%, rgba(62,123,91,.16) 0 16%, transparent 17%);
 
       background-size:
         1100px 1100px,
@@ -149,6 +160,7 @@
       background-attachment: fixed;
     }
 
+    /* ====== Layout ====== */
     .container{
       max-width: 900px;
       margin: 40px auto;
@@ -158,7 +170,7 @@
     /* Content on a clean card */
     .wrap{
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,.10);
+      border: 1px solid rgba(0,0,0,.08);
       border-radius: 14px;
       padding: 28px;
       box-shadow: 0 10px 30px rgba(0,0,0,.18);
@@ -170,6 +182,9 @@
     ul { padding-left: 18px; }
     .small { opacity: .65; font-size: 12px; margin-top: 40px; }
     .links a { margin-right: 12px; }
+
+    /* Optional: slightly nicer DOI lines */
+    .links strong { margin-right: 6px; }
   </style>
 </head>
 
@@ -206,6 +221,7 @@
         compactness assumptions.
       </p>
 
+      <!-- On-page keywords: clean (variants live in meta) -->
       <p><strong>Keywords:</strong>
         Yang–Mills; mass gap; constructive QFT; Osterwalder–Schrader; reflection positivity;
         Harris mixing; BRST; Wilson loops; SU(N); torsion
@@ -235,7 +251,7 @@
         </li>
       </ul>
 
-      <p class="small">Last updated: 2025-12-29 (v11)</p>
+      <p class="small">Last updated: 2025-12-29 (v10)</p>
     </div>
   </div>
 </body>
