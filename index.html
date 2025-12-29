@@ -104,13 +104,24 @@
       color: #111;
     }
 
-    /* Content on a clean card */
+    /* Content on a clean card (tinted, not white) */
     .wrap {
-      background: #ffffff;
-      border: 1px solid #e6e8ef;
+      background: #f2f7f4;                 /* soft green-tinted paper */
+      border: 1px solid #d6e3dc;           /* gentle green-gray border */
       border-radius: 14px;
       padding: 28px;
       box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      position: relative;
+    }
+
+    /* subtle accent bar */
+    .wrap:before{
+      content:"";
+      display:block;
+      height:4px;
+      border-radius: 10px;
+      background: #1f6f52;                 /* accent green */
+      margin: -28px -28px 22px -28px;      /* aligns to card edges */
     }
 
     h1 { margin-bottom: 0.25em; }
@@ -184,7 +195,7 @@
       </li>
     </ul>
 
-    <p class="small">Last updated: 2025-12-29 (v8)</p>
+    <p class="small">Last updated: 2025-12-29 (v9)</p>
   </div>
 </body>
 </html>
