@@ -8,7 +8,6 @@
 
   <title>Emmanouil Karolos Čižek — Research</title>
 
-  <!-- Professional snippet (no "Clay" / no prize vibes) -->
   <meta name="description" content="Research hub for Emmanouil Karolos Čižek: constructive 4D SU(N) Yang–Mills theory (existence and mass gap), OS reconstruction, Harris mixing, BRST, Wilson loops. Canonical monograph and related papers on Zenodo (DOIs)." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://tsizek.github.io/" />
@@ -28,13 +27,10 @@
   <meta name="twitter:description" content="Constructive 4D SU(N) Yang–Mills: OS reconstruction, Harris mixing, BRST, Wilson loops. Zenodo DOIs." />
   <meta name="twitter:image" content="https://tsizek.github.io/assets/og.png" />
 
-  <!-- Optional: browser tab icon -->
   <link rel="icon" href="https://tsizek.github.io/assets/og.png" type="image/png" />
 
-  <!-- Keep variant spellings here (meta only), keep on-page keywords clean -->
   <meta name="keywords" content="Emmanouil Karolos Čižek, Emmanouil Karolos Cizek, Manos Cizek, Manos Čižek, tsizek, Yang–Mills, Yang-Mills, Yang Mills, mass gap, existence and mass gap, constructive QFT, Osterwalder–Schrader, reflection positivity, Harris mixing, BRST, Wilson loops, SU(N), torsion, exponential clustering, abstract Wiener space, boundary laws, Vacuum Has Steps" />
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,13 +59,7 @@
         "name": "A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17246443" },
-        "url": "https://doi.org/10.5281/zenodo.17246443",
-        "keywords": [
-          "Yang–Mills", "mass gap", "existence and mass gap",
-          "constructive QFT", "Osterwalder–Schrader reconstruction",
-          "reflection positivity", "Harris mixing", "BRST", "Wilson loops",
-          "SU(N)", "torsion"
-        ]
+        "url": "https://doi.org/10.5281/zenodo.17246443"
       },
       {
         "@type": "ScholarlyArticle",
@@ -77,8 +67,7 @@
         "name": "Weak Harris Mixing and Exponential Clustering for Interacting Boundary Laws on Abstract Wiener Spaces",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17829624" },
-        "url": "https://doi.org/10.5281/zenodo.17829624",
-        "keywords": [ "Harris mixing", "exponential clustering", "boundary laws", "Abstract Wiener space", "ergodicity" ]
+        "url": "https://doi.org/10.5281/zenodo.17829624"
       },
       {
         "@type": "ScholarlyArticle",
@@ -86,18 +75,7 @@
         "name": "A Structural and Conceptual Overview of A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17718646" },
-        "url": "https://doi.org/10.5281/zenodo.17718646",
-        "keywords": [
-          "Yang–Mills",
-          "mass gap",
-          "constructive QFT",
-          "Osterwalder–Schrader reconstruction",
-          "reflection positivity",
-          "Wilson loops",
-          "BRST",
-          "structural overview",
-          "conceptual overview"
-        ]
+        "url": "https://doi.org/10.5281/zenodo.17718646"
       },
       {
         "@type": "ScholarlyArticle",
@@ -112,26 +90,23 @@
   </script>
 
   <style>
+    /* Palette tuned to your reference (warmer beige, stronger primaries, two blues, green, warm gray) */
     :root{
-      --paper: #f2ecdf;      /* warm off-white */
-      --ink: #111;
+      --paper:   #f3e8d7; /* beige */
+      --beige2:  #efe1cd;
+      --warmgry: #c8bfae;
 
-      /* punchier palette (closer to reference) */
-      --brick: #c44333;
-      --brick2:#e05a3d;
-      --mustard:#f0b126;
-      --gold:  #d79a10;
+      --red:     #c43a2f;
+      --orange:  #e27f1e;
+      --yellow:  #f0b12a;
 
-      --teal:  #2b7b73;
-      --teal2: #1f666d;
+      --blue1:   #2f5f8e;
+      --blue2:   #204f78;
 
-      --blue:  #2b5d8b;
-      --blue2: #1f4f7a;
+      --green:   #2f7a63;
+      --teal:    #2a6f75;
 
-      --green: #2f7a52;
-      --slate: #5b6774;
-
-      --link: #0b57d0;
+      --link:    #0b57d0;
     }
 
     html, body { height: 100%; }
@@ -140,96 +115,160 @@
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.55;
-      color: var(--ink);
+      color: #111;
       background-color: var(--paper);
 
       /*
-        Background strategy:
-        - Hard facets via multiple conic-gradients (gives triangular blocks)
-        - Additional diagonal shards via linear-gradients
-        - Two circle accents
-        - Very light “paper” overlay
+        Build a “poster” background:
+        1) big rectangular/diagonal panels
+        2) circular sections
+        3) isometric cube grid area in lower half
+        4) subtle paper lift (not washed out)
       */
       background-image:
-        /* paper-ish overlay */
-        linear-gradient(0deg, rgba(255,255,255,.14), rgba(255,255,255,.14)),
+        /* ===== paper base shading ===== */
+        radial-gradient(1200px 900px at 30% 10%, rgba(255,255,255,.35), transparent 60%),
+        radial-gradient(900px 700px at 70% 90%, rgba(0,0,0,.06), transparent 60%),
 
-        /* big geometric facets: top-left */
-        conic-gradient(from 205deg at 18% 18%,
-          rgba(196,67,51,.95) 0 22%,
-          rgba(240,177,38,.92) 22% 38%,
-          rgba(43,93,139,.88) 38% 56%,
-          rgba(43,123,115,.86) 56% 70%,
-          rgba(47,122,82,.84) 70% 84%,
-          rgba(91,103,116,.72) 84% 100%
-        ),
+        /* ===== big “rectangular” panels ===== */
+        linear-gradient(0deg, rgba(239,225,205,.92), rgba(239,225,205,.92)), /* base wash */
+        linear-gradient(90deg, rgba(255,255,255,.26) 0 14%, transparent 14% 100%), /* left pale strip */
+        linear-gradient(90deg, transparent 0 74%, rgba(0,0,0,.05) 74% 100%),      /* right shadow strip */
 
-        /* big geometric facets: right side */
-        conic-gradient(from 40deg at 78% 28%,
-          rgba(31,102,109,.86) 0 20%,
-          rgba(31,79,122,.88) 20% 42%,
-          rgba(47,122,82,.82) 42% 62%,
-          rgba(240,177,38,.82) 62% 78%,
-          rgba(224,90,61,.86) 78% 100%
-        ),
+        /* ===== diagonal facets (bigger, fewer, sharper) ===== */
+        linear-gradient(135deg, rgba(196,58,47,.92) 0 18%, transparent 18% 100%),
+        linear-gradient(45deg,  rgba(240,177,42,.92) 0 16%, transparent 16% 100%),
+        linear-gradient(225deg, rgba(47,95,142,.88) 0 20%, transparent 20% 100%),
+        linear-gradient(315deg, rgba(47,122,99,.85) 0 22%, transparent 22% 100%),
 
-        /* big geometric facets: bottom */
-        conic-gradient(from 165deg at 52% 82%,
-          rgba(43,93,139,.88) 0 24%,
-          rgba(47,122,82,.82) 24% 46%,
-          rgba(240,177,38,.84) 46% 64%,
-          rgba(196,67,51,.86) 64% 82%,
-          rgba(91,103,116,.70) 82% 100%
-        ),
+        /* ===== right “stack” of rectangles (like reference blocks) ===== */
+        linear-gradient(180deg, rgba(42,111,117,.86) 0 22%, transparent 22% 100%),
+        linear-gradient(180deg, transparent 0 22%, rgba(32,79,120,.86) 22% 44%, transparent 44% 100%),
+        linear-gradient(180deg, transparent 0 44%, rgba(47,122,99,.82) 44% 66%, transparent 66% 100%),
 
-        /* diagonal shard overlays (adds that “cut paper” look) */
+        /* ===== circular sections ===== */
+        radial-gradient(circle at 12% 14%, rgba(196,58,47,.95) 0 140px, transparent 142px),
+        radial-gradient(circle at 26% 20%, rgba(240,177,42,.92) 0 72px, transparent 74px),
+        radial-gradient(circle at 78% 22%, rgba(42,111,117,.22) 0 120px, transparent 122px),
+
+        /* ===== “cube / isometric grid” zone (lower half) ===== */
+        /* Two diagonal line sets + one horizontal to fake rhombi; then masked by a big bottom shape */
+        repeating-linear-gradient(30deg,
+          rgba(255,255,255,.28) 0 2px,
+          transparent 2px 44px),
+        repeating-linear-gradient(150deg,
+          rgba(255,255,255,.22) 0 2px,
+          transparent 2px 44px),
+        repeating-linear-gradient(90deg,
+          rgba(255,255,255,.12) 0 2px,
+          transparent 2px 44px),
+
+        /* bottom “platform” color blocks behind the grid */
         linear-gradient(135deg,
-          transparent 0 42%,
-          rgba(255,255,255,.22) 42% 44%,
-          transparent 44% 100%
-        ),
-        linear-gradient(45deg,
-          transparent 0 58%,
-          rgba(255,255,255,.18) 58% 60%,
-          transparent 60% 100%
-        ),
+          rgba(47,95,142,.70) 0 25%,
+          rgba(32,79,120,.72) 25% 50%,
+          rgba(47,122,99,.62) 50% 72%,
+          rgba(240,177,42,.70) 72% 86%,
+          rgba(226,127,30,.75) 86% 100%),
 
-        /* circle accents (like reference) */
-        radial-gradient(circle at 12% 16%, rgba(196,67,51,.96) 0 110px, transparent 112px),
-        radial-gradient(circle at 28% 30%, rgba(240,177,38,.92) 0 58px, transparent 60px),
-
-        /* faint curve suggestion (top-right “loop”) */
-        radial-gradient(closest-side at 82% 26%, transparent 74%, rgba(255,255,255,.85) 75% 77%, transparent 78%);
+        /* ===== tiny grain-ish speckle (very subtle) ===== */
+        radial-gradient(circle, rgba(0,0,0,.03) 1px, transparent 1.2px);
 
       background-size:
-        100% 100%,          /* paper overlay */
-        1200px 1200px,      /* top-left facets */
-        1400px 1400px,      /* right facets */
-        1500px 1500px,      /* bottom facets */
-        100% 100%,          /* shard */
-        100% 100%,          /* shard */
-        100% 100%,          /* red circle */
-        100% 100%,          /* mustard circle */
-        100% 100%;          /* loop */
+        /* paper shading */
+        100% 100%,
+        100% 100%,
+
+        /* rectangles */
+        100% 100%,
+        100% 100%,
+        100% 100%,
+
+        /* big facets */
+        1200px 1200px,
+        1100px 1100px,
+        1300px 1300px,
+        1250px 1250px,
+
+        /* right stack */
+        520px 760px,
+        520px 760px,
+        520px 760px,
+
+        /* circles */
+        100% 100%,
+        100% 100%,
+        100% 100%,
+
+        /* grid lines */
+        100% 100%,
+        100% 100%,
+        100% 100%,
+
+        /* platform blocks */
+        100% 100%,
+
+        /* grain */
+        6px 6px;
 
       background-position:
-        0 0,
-        -260px -220px,
-        120px -260px,
-        -120px 220px,
+        /* paper shading */
         0 0,
         0 0,
+
+        /* rectangles */
         0 0,
         0 0,
+        0 0,
+
+        /* big facets (tuned positions) */
+        -260px -240px,
+        180px -320px,
+        280px 120px,
+        -200px 220px,
+
+        /* right stack */
+        right -40px top 40px,
+        right -40px top 40px,
+        right -40px top 40px,
+
+        /* circles */
+        0 0,
+        0 0,
+        0 0,
+
+        /* grid lines */
+        0 60%,
+        0 60%,
+        0 60%,
+
+        /* platform blocks */
+        0 72%,
+
+        /* grain */
         0 0;
 
+      background-repeat: no-repeat;
       background-attachment: fixed;
+    }
+
+    /* “mask” the grid so it mostly lives in the lower part like the reference */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(1200px 520px at 45% 78%, rgba(243,232,215,0) 0 52%, rgba(243,232,215,.92) 54% 100%);
+      mix-blend-mode: normal;
     }
 
     .container{
       max-width: 900px;
       margin: 40px auto;
       padding: 0 16px;
+      position: relative;
+      z-index: 1;
     }
 
     .wrap{
@@ -312,7 +351,7 @@
         </li>
       </ul>
 
-      <p class="small">Last updated: 2025-12-29 (v11)</p>
+      <p class="small">Last updated: 2025-12-29 (v12)</p>
     </div>
   </div>
 </body>
