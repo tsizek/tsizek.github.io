@@ -28,13 +28,13 @@
   <meta name="twitter:description" content="Constructive 4D SU(N) Yang–Mills: OS reconstruction, Harris mixing, BRST, Wilson loops. Zenodo DOIs." />
   <meta name="twitter:image" content="https://tsizek.github.io/assets/og.png" />
 
-  <!-- Optional: browser tab icon (won't affect LinkedIn, but nice to have) -->
+  <!-- Optional: browser tab icon -->
   <link rel="icon" href="https://tsizek.github.io/assets/og.png" type="image/png" />
 
   <!-- Keep variant spellings here (meta only), keep on-page keywords clean -->
   <meta name="keywords" content="Emmanouil Karolos Čižek, Emmanouil Karolos Cizek, Manos Cizek, Manos Čižek, tsizek, Yang–Mills, Yang-Mills, Yang Mills, mass gap, existence and mass gap, constructive QFT, Osterwalder–Schrader, reflection positivity, Harris mixing, BRST, Wilson loops, SU(N), torsion, exponential clustering, abstract Wiener space, boundary laws, Vacuum Has Steps" />
 
-  <!-- Structured data: alternate spellings + DOIs are discoverable without ugly on-page keyword dumping -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,15 +112,25 @@
   </script>
 
   <style>
-    /* ====== Page background inspired by your geometric palette image ====== */
     :root{
-      --paper: #f3efe6;
-      --brick: #b84b3b;
-      --mustard: #d7a23a;
-      --teal: #2f6d73;
-      --blue: #2f5d8a;
-      --green: #3e7b5b;
-      --slate: #5d6b78;
+      --paper: #f2ecdf;      /* warm off-white */
+      --ink: #111;
+
+      /* punchier palette (closer to reference) */
+      --brick: #c44333;
+      --brick2:#e05a3d;
+      --mustard:#f0b126;
+      --gold:  #d79a10;
+
+      --teal:  #2b7b73;
+      --teal2: #1f666d;
+
+      --blue:  #2b5d8b;
+      --blue2: #1f4f7a;
+
+      --green: #2f7a52;
+      --slate: #5b6774;
+
       --link: #0b57d0;
     }
 
@@ -130,65 +140,101 @@
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.55;
-      color: #111;
+      color: var(--ink);
       background-color: var(--paper);
 
-      /* Layered gradients for “geometric blocks + soft circles” feel */
+      /*
+        Background strategy:
+        - Hard facets via multiple conic-gradients (gives triangular blocks)
+        - Additional diagonal shards via linear-gradients
+        - Two circle accents
+        - Very light “paper” overlay
+      */
       background-image:
-        /* big angled blocks */
-        linear-gradient(135deg, rgba(184,75,59,.45) 0 22%, transparent 22%),
-        linear-gradient(45deg,  rgba(215,162,58,.45) 0 18%, transparent 18%),
-        linear-gradient(225deg, rgba(47,93,138,.35) 0 24%, transparent 24%),
-        linear-gradient(315deg, rgba(62,123,91,.35) 0 26%, transparent 26%),
+        /* paper-ish overlay */
+        linear-gradient(0deg, rgba(255,255,255,.14), rgba(255,255,255,.14)),
 
-        /* secondary facets */
-        linear-gradient(120deg, rgba(47,109,115,.22) 0 34%, transparent 34%),
-        linear-gradient(300deg, rgba(93,107,120,.18) 0 28%, transparent 28%),
+        /* big geometric facets: top-left */
+        conic-gradient(from 205deg at 18% 18%,
+          rgba(196,67,51,.95) 0 22%,
+          rgba(240,177,38,.92) 22% 38%,
+          rgba(43,93,139,.88) 38% 56%,
+          rgba(43,123,115,.86) 56% 70%,
+          rgba(47,122,82,.84) 70% 84%,
+          rgba(91,103,116,.72) 84% 100%
+        ),
 
-        /* soft circles (muted) */
-        radial-gradient(circle at 18% 14%, rgba(184,75,59,.22) 0 18%, transparent 19%),
-        radial-gradient(circle at 78% 20%, rgba(215,162,58,.20) 0 14%, transparent 15%),
-        radial-gradient(circle at 70% 84%, rgba(47,93,138,.18) 0 18%, transparent 19%),
-        radial-gradient(circle at 30% 78%, rgba(62,123,91,.16) 0 16%, transparent 17%);
+        /* big geometric facets: right side */
+        conic-gradient(from 40deg at 78% 28%,
+          rgba(31,102,109,.86) 0 20%,
+          rgba(31,79,122,.88) 20% 42%,
+          rgba(47,122,82,.82) 42% 62%,
+          rgba(240,177,38,.82) 62% 78%,
+          rgba(224,90,61,.86) 78% 100%
+        ),
+
+        /* big geometric facets: bottom */
+        conic-gradient(from 165deg at 52% 82%,
+          rgba(43,93,139,.88) 0 24%,
+          rgba(47,122,82,.82) 24% 46%,
+          rgba(240,177,38,.84) 46% 64%,
+          rgba(196,67,51,.86) 64% 82%,
+          rgba(91,103,116,.70) 82% 100%
+        ),
+
+        /* diagonal shard overlays (adds that “cut paper” look) */
+        linear-gradient(135deg,
+          transparent 0 42%,
+          rgba(255,255,255,.22) 42% 44%,
+          transparent 44% 100%
+        ),
+        linear-gradient(45deg,
+          transparent 0 58%,
+          rgba(255,255,255,.18) 58% 60%,
+          transparent 60% 100%
+        ),
+
+        /* circle accents (like reference) */
+        radial-gradient(circle at 12% 16%, rgba(196,67,51,.96) 0 110px, transparent 112px),
+        radial-gradient(circle at 28% 30%, rgba(240,177,38,.92) 0 58px, transparent 60px),
+
+        /* faint curve suggestion (top-right “loop”) */
+        radial-gradient(closest-side at 82% 26%, transparent 74%, rgba(255,255,255,.85) 75% 77%, transparent 78%);
 
       background-size:
-        1100px 1100px,
-        980px 980px,
-        1200px 1200px,
-        1050px 1050px,
-        900px 900px,
-        1000px 1000px,
-        900px 900px,
-        900px 900px,
-        1000px 1000px,
-        950px 950px;
+        100% 100%,          /* paper overlay */
+        1200px 1200px,      /* top-left facets */
+        1400px 1400px,      /* right facets */
+        1500px 1500px,      /* bottom facets */
+        100% 100%,          /* shard */
+        100% 100%,          /* shard */
+        100% 100%,          /* red circle */
+        100% 100%,          /* mustard circle */
+        100% 100%;          /* loop */
 
       background-position:
-        -220px -180px,
+        0 0,
+        -260px -220px,
         120px -260px,
-        220px 120px,
-        -140px 240px,
-        420px 60px,
-        -320px 520px,
-        0px 0px,
-        140px 80px,
-        0px 0px,
-        0px 0px;
+        -120px 220px,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0;
 
       background-attachment: fixed;
     }
 
-    /* ====== Layout ====== */
     .container{
       max-width: 900px;
       margin: 40px auto;
       padding: 0 16px;
     }
 
-    /* Content on a clean card */
     .wrap{
       background: #ffffff;
-      border: 1px solid rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.10);
       border-radius: 14px;
       padding: 28px;
       box-shadow: 0 10px 30px rgba(0,0,0,.18);
@@ -200,8 +246,6 @@
     ul { padding-left: 18px; }
     .small { opacity: .65; font-size: 12px; margin-top: 40px; }
     .links a { margin-right: 12px; }
-
-    /* Optional: slightly nicer DOI lines */
     .links strong { margin-right: 6px; }
   </style>
 </head>
@@ -239,7 +283,6 @@
         compactness assumptions.
       </p>
 
-      <!-- On-page keywords: clean (variants live in meta) -->
       <p><strong>Keywords:</strong>
         Yang–Mills; mass gap; constructive QFT; Osterwalder–Schrader; reflection positivity;
         Harris mixing; BRST; Wilson loops; SU(N); torsion
@@ -269,7 +312,7 @@
         </li>
       </ul>
 
-      <p class="small">Last updated: 2025-12-29 (v10)</p>
+      <p class="small">Last updated: 2025-12-29 (v11)</p>
     </div>
   </div>
 </body>
