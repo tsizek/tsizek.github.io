@@ -90,176 +90,32 @@
   </script>
 
   <style>
-    /* Palette tuned to your reference (warmer beige, stronger primaries, two blues, green, warm gray) */
     :root{
-      --paper:   #f3e8d7; /* beige */
-      --beige2:  #efe1cd;
-      --warmgry: #c8bfae;
-
-      --red:     #c43a2f;
-      --orange:  #e27f1e;
-      --yellow:  #f0b12a;
-
-      --blue1:   #2f5f8e;
-      --blue2:   #204f78;
-
-      --green:   #2f7a63;
-      --teal:    #2a6f75;
-
-      --link:    #0b57d0;
+      --link: #0b57d0;
     }
 
     html, body { height: 100%; }
 
+    /* ====== REAL background image (not beige gradients) ======
+       Put your background here: assets/bg.jpg (or change the filename).
+       Example final URL: https://tsizek.github.io/assets/bg.jpg
+    */
     body{
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.55;
       color: #111;
-      background-color: var(--paper);
 
-      /*
-        Build a “poster” background:
-        1) big rectangular/diagonal panels
-        2) circular sections
-        3) isometric cube grid area in lower half
-        4) subtle paper lift (not washed out)
-      */
-      background-image:
-        /* ===== paper base shading ===== */
-        radial-gradient(1200px 900px at 30% 10%, rgba(255,255,255,.35), transparent 60%),
-        radial-gradient(900px 700px at 70% 90%, rgba(0,0,0,.06), transparent 60%),
-
-        /* ===== big “rectangular” panels ===== */
-        linear-gradient(0deg, rgba(239,225,205,.92), rgba(239,225,205,.92)), /* base wash */
-        linear-gradient(90deg, rgba(255,255,255,.26) 0 14%, transparent 14% 100%), /* left pale strip */
-        linear-gradient(90deg, transparent 0 74%, rgba(0,0,0,.05) 74% 100%),      /* right shadow strip */
-
-        /* ===== diagonal facets (bigger, fewer, sharper) ===== */
-        linear-gradient(135deg, rgba(196,58,47,.92) 0 18%, transparent 18% 100%),
-        linear-gradient(45deg,  rgba(240,177,42,.92) 0 16%, transparent 16% 100%),
-        linear-gradient(225deg, rgba(47,95,142,.88) 0 20%, transparent 20% 100%),
-        linear-gradient(315deg, rgba(47,122,99,.85) 0 22%, transparent 22% 100%),
-
-        /* ===== right “stack” of rectangles (like reference blocks) ===== */
-        linear-gradient(180deg, rgba(42,111,117,.86) 0 22%, transparent 22% 100%),
-        linear-gradient(180deg, transparent 0 22%, rgba(32,79,120,.86) 22% 44%, transparent 44% 100%),
-        linear-gradient(180deg, transparent 0 44%, rgba(47,122,99,.82) 44% 66%, transparent 66% 100%),
-
-        /* ===== circular sections ===== */
-        radial-gradient(circle at 12% 14%, rgba(196,58,47,.95) 0 140px, transparent 142px),
-        radial-gradient(circle at 26% 20%, rgba(240,177,42,.92) 0 72px, transparent 74px),
-        radial-gradient(circle at 78% 22%, rgba(42,111,117,.22) 0 120px, transparent 122px),
-
-        /* ===== “cube / isometric grid” zone (lower half) ===== */
-        repeating-linear-gradient(30deg,
-          rgba(255,255,255,.28) 0 2px,
-          transparent 2px 44px),
-        repeating-linear-gradient(150deg,
-          rgba(255,255,255,.22) 0 2px,
-          transparent 2px 44px),
-        repeating-linear-gradient(90deg,
-          rgba(255,255,255,.12) 0 2px,
-          transparent 2px 44px),
-
-        /* bottom “platform” color blocks behind the grid */
-        linear-gradient(135deg,
-          rgba(47,95,142,.70) 0 25%,
-          rgba(32,79,120,.72) 25% 50%,
-          rgba(47,122,99,.62) 50% 72%,
-          rgba(240,177,42,.70) 72% 86%,
-          rgba(226,127,30,.75) 86% 100%),
-
-        /* ===== tiny grain-ish speckle (very subtle) ===== */
-        radial-gradient(circle, rgba(0,0,0,.03) 1px, transparent 1.2px);
-
-      background-size:
-        /* paper shading */
-        100% 100%,
-        100% 100%,
-
-        /* rectangles */
-        100% 100%,
-        100% 100%,
-        100% 100%,
-
-        /* big facets */
-        1200px 1200px,
-        1100px 1100px,
-        1300px 1300px,
-        1250px 1250px,
-
-        /* right stack */
-        520px 760px,
-        520px 760px,
-        520px 760px,
-
-        /* circles */
-        100% 100%,
-        100% 100%,
-        100% 100%,
-
-        /* grid lines */
-        100% 100%,
-        100% 100%,
-        100% 100%,
-
-        /* platform blocks */
-        100% 100%,
-
-        /* grain */
-        6px 6px;
-
-      background-position:
-        /* paper shading */
-        0 0,
-        0 0,
-
-        /* rectangles */
-        0 0,
-        0 0,
-        0 0,
-
-        /* big facets (tuned positions) */
-        -260px -240px,
-        180px -320px,
-        280px 120px,
-        -200px 220px,
-
-        /* right stack */
-        right -40px top 40px,
-        right -40px top 40px,
-        right -40px top 40px,
-
-        /* circles */
-        0 0,
-        0 0,
-        0 0,
-
-        /* grid lines */
-        0 60%,
-        0 60%,
-        0 60%,
-
-        /* platform blocks */
-        0 72%,
-
-        /* grain */
-        0 0;
-
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: url("assets/bg.jpg") center / cover no-repeat fixed;
     }
 
-    /* “mask” the grid so it mostly lives in the lower part like the reference */
+    /* Optional: improves readability (subtle overlay) */
     body::before{
       content:"";
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background:
-        radial-gradient(1200px 520px at 45% 78%, rgba(243,232,215,0) 0 52%, rgba(243,232,215,.92) 54% 100%);
-      mix-blend-mode: normal;
+      background: rgba(255,255,255,0.12);
     }
 
     .container{
@@ -350,7 +206,7 @@
         </li>
       </ul>
 
-      <p class="small">Last updated: 2025-12-29 (v12)</p>
+      <p class="small">Last updated: 2025-12-29 (v13)</p>
     </div>
   </div>
 </body>
