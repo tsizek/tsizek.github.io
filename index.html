@@ -51,7 +51,8 @@
         "sameAs": [
           "https://orcid.org/0009-0009-9099-6086",
           "https://scholar.google.com/citations?user=UcIaFUAAAAAJ&hl=en",
-          "https://github.com/tsizek/tsizek.github.io"
+          "https://github.com/tsizek/tsizek.github.io",
+          "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22%C4%8Ci%C5%BEek%2C%20Emmanouil%20Karolos%22&l=list&p=1&s=10&sort=bestmatch"
         ]
       },
       {
@@ -59,12 +60,10 @@
         "@id": "https://tsizek.github.io/#monograph",
         "name": "A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions",
         "author": { "@id": "https://tsizek.github.io/#person" },
-        "identifier": [
-          { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17246443" }
-        ],
-        "url": "https://zenodo.org/records/17721926",
+        "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17246443" },
+        "url": "https://doi.org/10.5281/zenodo.17246443",
         "sameAs": [
-          "https://doi.org/10.5281/zenodo.17246443",
+          "https://zenodo.org/records/17721926",
           "https://doi.org/10.5281/zenodo.17721926"
         ]
       },
@@ -74,9 +73,9 @@
         "name": "Weak Harris Mixing and Exponential Clustering for Interacting Boundary Laws on Abstract Wiener Spaces",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17829624" },
-        "url": "https://zenodo.org/records/17829624",
+        "url": "https://doi.org/10.5281/zenodo.17829624",
         "sameAs": [
-          "https://doi.org/10.5281/zenodo.17829624"
+          "https://zenodo.org/records/17829624"
         ]
       },
       {
@@ -85,9 +84,9 @@
         "name": "A Structural and Conceptual Overview of A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17718647" },
-        "url": "https://zenodo.org/records/17718647",
+        "url": "https://doi.org/10.5281/zenodo.17718647",
         "sameAs": [
-          "https://doi.org/10.5281/zenodo.17718647"
+          "https://zenodo.org/records/17718647"
         ]
       },
       {
@@ -96,9 +95,9 @@
         "name": "The Vacuum Has Steps",
         "author": { "@id": "https://tsizek.github.io/#person" },
         "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17929933" },
-        "url": "https://zenodo.org/records/17929933",
+        "url": "https://doi.org/10.5281/zenodo.17929933",
         "sameAs": [
-          "https://doi.org/10.5281/zenodo.17929933"
+          "https://zenodo.org/records/17929933"
         ]
       }
     ]
@@ -117,7 +116,6 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.55;
       color: #111;
-
       background: url("assets/bg.jpg") center / cover no-repeat fixed;
     }
 
@@ -147,12 +145,23 @@
 
     h1 { margin-bottom: 0.25em; }
     .meta { margin-top: 0; opacity: 0.88; }
+
     a { word-break: break-word; color: var(--link); }
     ul { padding-left: 18px; }
+
     .small { opacity: .65; font-size: 12px; margin-top: 40px; }
     .links a { margin-right: 12px; }
     .links strong { margin-right: 6px; }
-    .profiles { margin-top: 44px; }
+
+    .profiles{
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0,0,0,.10);
+      font-size: 14px;
+      opacity: 0.92;
+    }
+    .profiles strong{ margin-right: 10px; }
+    .profiles a{ margin-right: 14px; white-space: nowrap; }
   </style>
 </head>
 
@@ -181,10 +190,6 @@
         <strong>DOI:</strong>
         <a href="https://doi.org/10.5281/zenodo.17246443">doi:10.5281/zenodo.17246443</a>
       </p>
-      <p class="links">
-        <strong>Zenodo record:</strong>
-        <a href="https://zenodo.org/records/17721926">zenodo.org/records/17721926</a>
-      </p>
 
       <h3>Abstract</h3>
       <p>
@@ -204,7 +209,7 @@
 
       <h3>How to cite</h3>
       <p>
-        Čižek, E. K. (2025). <em>A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions</em>.
+        Čižek, E. K. (2025). <em>A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions (v1.1.0)</em>.
         Zenodo. <a href="https://doi.org/10.5281/zenodo.17246443">doi:10.5281/zenodo.17246443</a>
       </p>
 
@@ -214,37 +219,34 @@
           <a href="/papers/weak-harris-mixing/">
             <strong>Weak Harris Mixing and Exponential Clustering for Interacting Boundary Laws on Abstract Wiener Spaces</strong>
           </a><br/>
-          DOI: <a href="https://doi.org/10.5281/zenodo.17829624">doi:10.5281/zenodo.17829624</a><br/>
-          Zenodo record: <a href="https://zenodo.org/records/17829624">zenodo.org/records/17829624</a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.17829624">doi:10.5281/zenodo.17829624</a>
         </li>
 
         <li>
           <a href="/papers/structural-overview/">
             <strong>A Structural and Conceptual Overview of A Constructive Einstein–Cartan–Yang–Mills Theory with Positive Mass Gap in Four Dimensions</strong>
           </a><br/>
-          DOI: <a href="https://doi.org/10.5281/zenodo.17718647">doi:10.5281/zenodo.17718647</a><br/>
-          Zenodo record: <a href="https://zenodo.org/records/17718647">zenodo.org/records/17718647</a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.17718647">doi:10.5281/zenodo.17718647</a>
         </li>
 
         <li>
           <a href="/papers/vacuum-has-steps/">
             <strong>The Vacuum Has Steps</strong>
           </a><br/>
-          DOI: <a href="https://doi.org/10.5281/zenodo.17929933">doi:10.5281/zenodo.17929933</a><br/>
-          Zenodo record: <a href="https://zenodo.org/records/17929933">zenodo.org/records/17929933</a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.17929933">doi:10.5281/zenodo.17929933</a>
         </li>
       </ul>
 
-      <div class="profiles small profiles">
+      <div class="profiles">
         <strong>Profiles:</strong>
         <a href="https://scholar.google.com/citations?user=UcIaFUAAAAAJ&hl=en">Google Scholar</a>
-        &nbsp;·&nbsp;
+        <a href="https://ssrn.com/">SSRN</a>
+        <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22%C4%8Ci%C5%BEek%2C%20Emmanouil%20Karolos%22&l=list&p=1&s=10&sort=bestmatch">Zenodo</a>
         <a href="https://orcid.org/0009-0009-9099-6086">ORCID</a>
-        &nbsp;·&nbsp;
         <a href="https://github.com/tsizek/tsizek.github.io">GitHub</a>
       </div>
 
-      <p class="small">Last updated: 2025-12-29 (v13)</p>
+      <p class="small">Last updated: 2026-01-04</p>
     </div>
   </div>
 </body>
